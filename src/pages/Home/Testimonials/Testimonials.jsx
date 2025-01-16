@@ -7,8 +7,9 @@ import "swiper/css/navigation";
 import { useEffect, useState } from "react";
 import { Rating } from "@smastrom/react-rating";
 import "@smastrom/react-rating/style.css";
-import SectionTitle from "../../components/SectionTitle";
 import { Navigation } from "swiper/modules";
+import SectionTitle from "../../../components/SectionTitle";
+
 
 const Testimonials = () => {
   const [reviews, setReviews] = useState([]);

@@ -2,7 +2,7 @@ import React, { useContext } from "react";
 import { Link, NavLink } from "react-router-dom";
 
 const Navbar = () => {
-  const links = (
+  const navOptions = (
     <>
       <li>
         <NavLink
@@ -18,26 +18,26 @@ const Navbar = () => {
       </li>
       <li>
         <NavLink
-          to="/foods"
+          to="/menu"
           className={({ isActive }) =>
             isActive
               ? "text-primaryColor font-bold text-lg"
               : "font-bold text-lg"
           }
         >
-          All Foods
+          Our Menu
         </NavLink>
       </li>
       <li>
         <NavLink
-          to="/gallery"
+          to="/order"
           className={({ isActive }) =>
             isActive
               ? "text-primaryColor font-bold text-lg"
               : "font-bold text-lg"
           }
         >
-          Gallery
+          Order
         </NavLink>
       </li>
     </>
@@ -81,7 +81,7 @@ const Navbar = () => {
           <div className="hidden flex-none lg:block w-[40%]">
             <ul className="flex flex-row gap-10">
               {/* Navbar menu content here */}
-              {links}
+              {navOptions}
             </ul>
           </div>
 
@@ -166,7 +166,7 @@ const Navbar = () => {
           <div className="flex pb-3">
             {/* <Theme></Theme> */}
           </div>
-          {links}
+          {navOptions}
 
           {/* <div className="w-full mt-10">
             {user && user?.email ? (
