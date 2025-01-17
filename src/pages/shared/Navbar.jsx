@@ -30,7 +30,7 @@ const Navbar = () => {
       </li>
       <li>
         <NavLink
-          to="/order"
+          to="/order/salad"
           className={({ isActive }) =>
             isActive
               ? "text-primaryColor font-bold text-lg"
@@ -38,6 +38,18 @@ const Navbar = () => {
           }
         >
           Order
+        </NavLink>
+      </li>
+      <li>
+        <NavLink
+          to="/login"
+          className={({ isActive }) =>
+            isActive
+              ? "text-primaryColor font-bold text-lg"
+              : "font-bold text-lg"
+          }
+        >
+          Login
         </NavLink>
       </li>
     </>
@@ -72,10 +84,7 @@ const Navbar = () => {
 
           <div className="flex-1 ">
             {/* <img className="lg:w-[70px] w-[50px] " src={logo} alt="" /> */}
-            <p className="font-bold lg:text-3xl text-xl">
-              {" "}
-              Fradel and Spies
-            </p>
+            <p className="font-bold lg:text-3xl text-xl"> Fradel and Spies</p>
           </div>
 
           <div className="hidden flex-none lg:block w-[40%]">
@@ -163,9 +172,7 @@ const Navbar = () => {
         ></label>
         <ul className="menu bg-base-200 min-h-full w-60 p-4 rounded-r-xl">
           {/* Sidebar content here */}
-          <div className="flex pb-3">
-            {/* <Theme></Theme> */}
-          </div>
+          <div className="flex pb-3">{/* <Theme></Theme> */}</div>
           {navOptions}
 
           {/* <div className="w-full mt-10">
