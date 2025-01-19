@@ -5,6 +5,7 @@ import { LoadCanvasTemplate, loadCaptchaEnginge, validateCaptcha } from "react-s
 
 import { AuthContext } from "../../../provider/AuthProvider";
 import Swal from "sweetalert2";
+import GoogleLogin from "../socialLogin/GoogleLogin";
 
 const Login = () => {
   const [disabled, setDisabled] = useState(true);
@@ -113,6 +114,7 @@ const Login = () => {
                 />
               </div>
             </form>
+            <GoogleLogin></GoogleLogin>
             <p>
               <small>
                 New Here? <Link to="/signup">Create an account</Link>{" "}
